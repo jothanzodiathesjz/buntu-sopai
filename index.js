@@ -52,5 +52,5 @@ const start = async () => {
   }
 };
 
-start();
-// exports.handler = serverless(app);
+// start();
+exports.handler = serverless(app);
