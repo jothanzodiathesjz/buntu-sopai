@@ -1,0 +1,69 @@
+<%- include('../partials/mainpage/headers') %>
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h3 class="text-white display-3 mb-4">Fasilities</h1>
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item active text-white">Fasilities</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+     <!-- Services Start -->
+        <div class="container-fluid bg-light service py-5">
+            <div class="container py-5 d-flex flex-column gap-4">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <h5 class="section-title px-3">Searvices</h5>
+                    <h1 class="mb-0">Our Facilities</h1>
+                </div>
+                <% dataFacilities.forEach(function(item,index){ %>
+                <div class="row g-4 justify-content-center align-items-center">
+                    <div class="col-lg-6 <%= index % 2 === 0 ? 'order-lg-1' : '' %>">
+                        <div class="row g-4">
+                            <div class="col-12">
+                                
+                                    <div class="service-content text-end">
+                                        <img src="<%= item.img %>" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 <%= index % 2 !== 0 ? 'order-lg-1' : '' %>" >
+                        <div class="row g-4 " >
+                            <div class="col-12">
+                                
+                                        <h5 class="mb-4"><%= item.title %></h5>
+                                        <p class="mb-0"><%= item.text %></p>
+                                       
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <% }); %>
+            </div>
+        </div>
+        <!-- Services End -->
+
+
+        <!-- Subscribe Start -->
+        <div class="container-fluid subscribe py-5">
+            <div class="container text-center py-5">
+                <div class="mx-auto text-center" style="max-width: 900px;">
+                    <h5 class="subscribe-title px-3">Subscribe</h5>
+                    <h1 class="text-white mb-4">Our Newsletter</h1>
+                    <p class="text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum repellat a laborum quasi.
+                    </p>
+                    <div class="position-relative mx-auto">
+                        <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Subscribe End -->
+<%- include('../partials/mainpage/footers') %>
