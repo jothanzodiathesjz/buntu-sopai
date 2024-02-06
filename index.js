@@ -1,5 +1,5 @@
 require("dotenv").config();
-
+const serverless = require("serverless-http");
 const express = require("express");
 require("dotenv").config();
 
@@ -52,5 +52,5 @@ const start = async () => {
   }
 };
 
-
-start();
+export const handler = serverless(app);
+// start();
